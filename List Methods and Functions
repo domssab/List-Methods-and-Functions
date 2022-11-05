@@ -1,0 +1,66 @@
+# SABALLO, CHANTAL DOMINIQUE C.             BSCOE 2-2
+# DATA STRUCTURES AND ALGORITHMS            OCTOBER 22, 2022
+# ASSIGNMENT 2
+
+array = [8, 5, 7, 4, 1, 9, 16, 22, 14, 27]
+print("Array: 8, 5, 7, 4, 1, 9, 16, 22, 14, 27")
+print("Menu:"
+      "\n1 -> Add an element"
+      "\n2 -> Insert an element"
+      "\n3 -> Modify an element"
+      "\n4 -> Delete an element"
+      "\n5 -> Arrange in ascending order"
+      "\n6 -> Arrange in descending order"
+      "\n7 -> Add all the numbers"
+      "\n8 -> Smallest number"
+      "\n9 -> Largest number"
+      "\n10 -> Exit")
+
+num_menu = 0
+while num_menu in (0, 1, 2, 3, 4, 5, 6, 7):
+      num_menu = int(input("What do you want to do? (1-10): "))
+      if num_menu == 1:
+            add = int(input("What do you want to add?: "))
+            array.append(add)
+            print("The element has been added.")
+            print("This is the new array: ", array)
+      if num_menu == 2:
+            insert = int(input("What do you want to insert?: "))
+            pos_insert = int(input("Where do you want to insert the number?: "))
+            array.insert(pos_insert, insert)
+            print("The element has been inserted.")
+            print("This is the new array: ", array)
+      if num_menu == 3:
+            modify = int(input("Which do you want to change?: "))
+            mod = int(input("What to replace?: "))
+            array[modify] = mod
+            print("The element has been replaced.")
+            print("This is the new array: ", array)
+      if num_menu == 4:
+            remove_num = int(input("Which do you want to remove?: "))
+            array.remove(remove_num)
+            print("The element has been removed.")
+            print("This is the new array: ", array)
+      if num_menu == 5:
+            array.sort()
+            print("The list has been sorted into ascending order.")
+            print("This is the new array: ", array)
+      if num_menu == 6:
+            array.reverse()
+            print("The list has ben sorted into descending order.")
+            print("This is the new array: ", array)
+      if num_menu == 7:
+            total = sum(array)
+            print("The total of the elements are computed.")
+            print("This is the sum: ", total)
+      if num_menu == 8:
+            smallest = min(array)
+            print("The smallest number has been determined.")
+            print("This is the number: ", smallest)
+      if num_menu == 9:
+            largest = max(array)
+            print("The largest number has been determined.")
+            print("This is the number: ", largest)
+      if num_menu == 10:
+            print("Thank you!")
+            break
